@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Cool Online CV Generator</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto&family=Merriweather&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js">
+  </script>
+</head>
+
+<body>
+  <h1 class="fancy-title">
+    <span>🚀</span> Cool <span class="gradient-text">Online CV</span> Generator <span>🧠</span>
+  </h1>
+
+  <div id="mode-toggle-btn" class="mode-toggle on">
+    <input type="checkbox" id="mode-toggle-checkbox" />
+    <label for="mode-toggle-checkbox" class="slider"></label>
+    <span class="toggle-text">On</span>
+  </div>
+
+  <div class="container" id="main-container">
+    <form id="cv-form">
+      <div class="profile-preview-row">
+        <label style="flex: 1;">
+          Profile Picture:
+          <input type="file" id="profile-pic" accept="image/*" />
+        </label>
+
+        <label class="checkbox-label">
+          <input type="checkbox" id="live-preview-toggle" checked />
+          <span>Live Preview</span>
+        </label>
+      </div>
+
+      <label>Font Style:
+        <select id="font-select">
+          <option value="'Inter', sans-serif">Inter</option>
+          <option value="'Roboto', sans-serif">Roboto</option>
+          <option value="'Merriweather', serif">Merriweather</option>
+        </select>
+      </label>
+
+      <label>Template Style:
+        <select id="template-select">
+          <option value="template-classic">Classic</option>
+          <option value="template-sidebar">Modern Sidebar</option>
+          <option value="template-minimalist">Minimalist</option>
+        </select>
+      </label>
+
+      <label>Theme Color:
+        <select id="color-select">
+          <option value="theme-grey">Grey</option>
+          <option value="theme-blue">Blue</option>
+          <option value="theme-green">Green</option>
+        </select>
+      </label>
+
+      <label>Name: <input type="text" id="name" required /></label>
+      <label>Email: <input type="email" id="email" required /></label>
+      <label>Phone: <input type="text" id="phone" /></label>
+      <div id="websites-section">
+        <label>Website Name: <input type="text" id="website-name" placeholder="e.g., Portfolio, Blog" /></label>
+        <label>Website URL: <input type="text" id="website-url" placeholder="https://example.com" /></label>
+        <button type="button" onclick="addWebsite()">Add Website</button>
+        <ul id="website-list" style="margin-top:10px;"></ul>
+      </div>
+
+      <label>Summary: <textarea id="summary"></textarea></label>
+      <label>Education: <textarea id="education"></textarea></label>
+      <label>Experience: <textarea id="experience"></textarea></label>
+      <div class="form-group">
+        <label for="project-name">Project Name:</label>
+        <input type="text" id="project-name" placeholder="Enter project name">
+
+        <label for="project-link">Project Link:</label>
+        <input type="text" id="project-link" placeholder="Enter project URL">
+
+        <label for="project-desc">About Project (optional):</label>
+        <textarea id="project-desc" placeholder="Short description (optional)"></textarea>
+
+        <button type="button" onclick="addProject()">Add Project</button>
+      </div>
+
+      <ul id="project-list" style="margin-top: 10px;"></ul>
+
+      <label>Skills (comma separated): <input type="text" id="skills" /></label>
+
+      <button type="button" id="reset-btn">Reset</button>
+    </form>
+
+
+    <div class="cv-preview">
+      <div id="cv-content-wrapper" class="template-classic theme-grey" style="font-family:'Inter', sans-serif;">
+        <div id="profile-picture-preview"></div>
+        <div id="cv-details">
+          <p style="text-align:center; color:#777;">Your CV preview will appear here...</p>
+        </div>
+      </div>
+    </div>
+
+    <button id="download-btn" style="grid-column: span 2; margin: auto;">Download PDF</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
