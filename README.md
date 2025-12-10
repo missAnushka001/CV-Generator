@@ -68,9 +68,8 @@ This is a simple client-side application. No backend server is required.
 
 This section is reserved for showcasing the application's look and feel. Once you upload images, replace the placeholders below.
 
-| Dark Mode (Classic Template) | Light Mode (Sidebar Template) | Mobile View |
-| :--------------------------: | :---------------------------: | :---------: |
-| ![jpggg](https://github.com/missAnushka001/CV-Generator/blob/main/Screenshot%20(15).png)     | ![https://github.com/missAnushka001/CV-Generator/blob/main/Screenshot%20(15).png]       | \[*Upload Image 3 Here*] |
+###Dark Mode
+![Dark mode](https://github.com/missAnushka001/CV-Generator/blob/main/Screenshot%20(15).png)
 
 ---
 
