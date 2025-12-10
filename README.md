@@ -70,7 +70,7 @@ This section is reserved for showcasing the application's look and feel. Once yo
 
 | Dark Mode (Classic Template) | Light Mode (Sidebar Template) | Mobile View |
 | :--------------------------: | :---------------------------: | :---------: |
-| \[*Upload Image 1 Here*]      | \[*Upload Image 2 Here*]       | \[*Upload Image 3 Here*] |
+| \[[*Upload Image 1 Here*](https://github.com/missAnushka001/CV-Generator/blob/main/Screenshot%20(15).png)]      | \[*Upload Image 2 Here*]       | \[*Upload Image 3 Here*] |
 
 ---
 
